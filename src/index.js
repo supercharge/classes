@@ -1,6 +1,6 @@
 'use strict'
 
-const Skeleton = require('./skeleton-class')
+const Classes = require('./classes')
 
-module.exports = Skeleton
-module.exports.default = Skeleton
+module.exports = Classes
+module.exports.default = Classes
