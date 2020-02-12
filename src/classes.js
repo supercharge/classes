@@ -9,9 +9,20 @@ class Classes {
    * @returns {Boolean}
    */
   static isClass (input) {
-    return typeof input === 'function'
+    return this.isFunction(input)
       ? /^class /.test(Function.prototype.toString.call(input))
       : false
+  }
+
+  /**
+   * Determine whether the given `input` is a function.
+   *
+   * @param {*} input
+   *
+   * @returns {Boolean}
+   */
+  static isFunction (input) {
+    return typeof input === 'function'
   }
 }
 
