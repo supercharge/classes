@@ -10,7 +10,7 @@ class Classes {
    */
   static isClass (input) {
     return this.isFunction(input)
-      ? /^class /.test(Function.prototype.toString.call(input))
+      ? input.toString().indexOf('class ') === 0
       : false
   }
 
