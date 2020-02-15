@@ -30,7 +30,7 @@
 ---
 
 ## Introduction
-A short introduction for `@supercharge/classes`.
+The `@supercharge/classes` package provides a handful methods around classes in Node.js and JavaScript. For example, determine whether a given input is a class using the `.isClass(input)` method.
 
 
 ## Installation
@@ -45,21 +45,21 @@ Find all the [details for `@supercharge/classes` in the extensive Supercharge do
 
 
 ## Usage
-Using `@supercharge/classes` is pretty straightforward.
-
-For example, you may …:
+Using `@supercharge/classes` is pretty straightforward. Install and import the package and use it right away:
 
 ```js
-const Pkg = require('@supercharge/classes')
+const Cls = require('@supercharge/classes')
 
-await Pkg.method()
+Cls.isClass(class Rabbit {})
+// true
 
-// Result goes here
+Cls.isClass(function classLikeRabbitFunc () {})
+// false
 ```
 
 
 ## Contributing
-Do you miss a string function? We very much appreciate your contribution! Please send in a pull request 😊
+Do you miss a class-related function? We very much appreciate your contribution! Please send in a pull request 😊
 
 1.  Create a fork
 2.  Create your feature branch: `git checkout -b my-feature`
