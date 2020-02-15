@@ -1,6 +1,6 @@
 {
   "name": "@supercharge/classes",
-  "description": ":packageDescription",
+  "description": "Class utilities for Node.js and JavaScript",
   "version": "1.0.0",
   "author": "Marcus Pöhls <marcus@superchargejs.com>",
   "bugs": {
