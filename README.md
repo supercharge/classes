@@ -13,8 +13,8 @@
   <br/>
   <p>
     <a href="#installation"><strong>Installation</strong></a> ·
-    <a href="#Docs"><strong>Docs</strong></a> ·
-    <a href="#usage"><strong>Usage</strong></a>
+    <a href="#usage"><strong>Usage</strong></a> ·
+    <a href="#api"><strong>API</strong></a>
   </p>
   <br/>
   <br/>
@@ -40,21 +40,41 @@ npm i @supercharge/classes
 ```
 
 
-## Docs
-Find all the [details for `@supercharge/classes` in the extensive Supercharge docs](https://superchargejs.com/docs/classes).
-
-
 ## Usage
 Using `@supercharge/classes` is pretty straightforward. Install and import the package and use it right away:
 
 ```js
-const Cls = require('@supercharge/classes')
+const { isClass } = require('@supercharge/classes')
 
-Cls.isClass(class Rabbit {})
+isClass(class Rabbit {})
 // true
 
-Cls.isClass(function classLikeRabbitFunc () {})
+isClass(function classLikeRabbitFunc () {})
 // false
+```
+
+
+## API
+
+#### `Cls.isClass(input)`
+Determine whether the given `input` is a class.
+
+```js
+const { isClass } = require('@supercharge/classes')
+
+isClass(class YourClass {})
+// true
+```
+
+
+#### `Cls.isFunction(input)`
+Determine whether the given `input` is a function.
+
+```js
+const { isFunction } = require('@supercharge/classes')
+
+isFunction(function sum () {})
+// true
 ```
 
 
