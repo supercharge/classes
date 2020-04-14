@@ -51,5 +51,6 @@
     "test:run": "lab --assert @hapi/code --leaks --coverage --reporter console --output stdout --reporter html --output ./coverage/coverage.html",
     "test:single": "lab --assert @hapi/code --leaks --lint --id",
     "test:types": "tsc"
-  }
+  },
+  "types": "dist"
 }
