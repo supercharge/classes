@@ -6,6 +6,11 @@ export class ClassHandler {
    */
   private readonly input: any
 
+  /**
+   * Create a new instance for the given `input`.
+   *
+   * @param {*} input
+   */
   constructor (input: any) {
     this.input = input
   }
