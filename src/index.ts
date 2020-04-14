@@ -2,5 +2,24 @@
 
 import { ClassHandler } from './class-handler'
 
-export const isClass = (value: any): boolean => new ClassHandler(value).isClass()
-export const isFunction = (value: any): boolean => new ClassHandler(value).isFunction()
+/**
+ * Determine whether the given `value` is an ES2015 class.
+ *
+ * @param {*} value
+ *
+ * @returns {Boolean}
+ */
+export const isClass = function (value: any): boolean {
+  return new ClassHandler(value).isClass()
+}
+
+/**
+ * Determine whether the given `value` is a function.
+ *
+ * @param {*} value
+ *
+ * @returns {Boolean}
+ */
+export const isFunction = function (value: any): boolean {
+  return new ClassHandler(value).isFunction()
+}
