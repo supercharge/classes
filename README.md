@@ -56,7 +56,7 @@ isClass(function classLikeRabbitFunc () {})
 
 ## API
 
-#### `Cls.isClass(input)`
+#### `isClass(input)`
 Determine whether the given `input` is a class.
 
 ```js
@@ -67,7 +67,7 @@ isClass(class YourClass {})
 ```
 
 
-#### `Cls.isFunction(input)`
+#### `isFunction(input)`
 Determine whether the given `input` is a function.
 
 ```js
