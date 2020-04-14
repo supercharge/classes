@@ -24,7 +24,8 @@
     "node": ">=8"
   },
   "files": [
-    "src"
+    "dist",
+    "index.js"
   ],
   "homepage": "https://github.com/supercharge/classes",
   "keywords": [
