@@ -30,11 +30,14 @@
   "homepage": "https://github.com/supercharge/classes",
   "keywords": [
     "nodejs",
+    "class",
+    "utilities",
+    "class-utilities",
     "supercharge",
     "superchargejs"
   ],
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
