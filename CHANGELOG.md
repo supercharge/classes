@@ -7,6 +7,9 @@
 - `isSubclassOf` method: determine whether a given class is subclassing (even in chain) a base class
   - Usage: `isSubclassOf(ClassToCheck, Base)`
 
+### Updated
+- bump dependencies
+
 
 ## [1.2.0](https://github.com/supercharge/queue-datastructure/compare/v1.1.0...v1.2.0) - 2020-04-14
 
