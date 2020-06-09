@@ -38,13 +38,13 @@ export class ClassHandler {
   /**
    * Determine whether the given `input` is a function.
    *
-   * @param {*} clazz
+   * @param {*} Base
    *
    * @returns {Boolean}
    */
-  isSubclassOf (clazz: any): boolean {
-    return new ClassHandler(clazz).isClass()
-      ? this.input.prototype instanceof clazz
+  isSubclassOf (Base: any): boolean {
+    return new ClassHandler(Base).isClass()
+      ? this.input.prototype instanceof Base
       : false
   }
 }
