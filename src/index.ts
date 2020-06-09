@@ -3,6 +3,17 @@
 import { ClassHandler } from './class-handler'
 
 /**
+ * Determine whether the given `value` is a function.
+ *
+ * @param {*} value
+ *
+ * @returns {Boolean}
+ */
+export const isFunction = function (value: any): boolean {
+  return new ClassHandler(value).isFunction()
+}
+
+/**
  * Determine whether the given `value` is an ES2015 class.
  *
  * @param {*} value
@@ -14,12 +25,12 @@ export const isClass = function (value: any): boolean {
 }
 
 /**
- * Determine whether the given `value` is a function.
+ * Determine whether the given `value` is an ES2015 class.
  *
  * @param {*} value
  *
  * @returns {Boolean}
  */
-export const isFunction = function (value: any): boolean {
-  return new ClassHandler(value).isFunction()
+export const isSubclassOf = function (input: any, clazz: any): boolean {
+  return new ClassHandler(input).isSubclassOf(clazz)
 }

@@ -18,8 +18,6 @@ export class ClassHandler {
   /**
    * Determine whether the given `input` is an ES2015 class.
    *
-   * @param {*} input
-   *
    * @returns {Boolean}
    */
   isClass (): boolean {
@@ -31,11 +29,22 @@ export class ClassHandler {
   /**
    * Determine whether the given `input` is a function.
    *
-   * @param {*} input
-   *
    * @returns {Boolean}
    */
   isFunction (): boolean {
     return typeof this.input === 'function'
+  }
+
+  /**
+   * Determine whether the given `input` is a function.
+   *
+   * @param {*} clazz
+   *
+   * @returns {Boolean}
+   */
+  isSubclassOf (clazz: any): boolean {
+    return new ClassHandler(clazz).isClass()
+      ? this.input.prototype instanceof clazz
+      : false
   }
 }
