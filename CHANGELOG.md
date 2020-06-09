@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.3.0](https://github.com/supercharge/queue-datastructure/compare/v1.2.0...v1.3.0) - 2020-06-09
+
+### Added
+- `isSubclassOf` method: determine whether a given class is subclassing (even in chain) a base class
+  - Usage: `isSubclassOf(ClassToCheck, Base)`
+
+
 ## [1.2.0](https://github.com/supercharge/queue-datastructure/compare/v1.1.0...v1.2.0) - 2020-04-14
 
 ### Added
