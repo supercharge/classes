@@ -1,7 +1,19 @@
 # Changelog
 
 
-## [1.3.0](https://github.com/supercharge/queue-datastructure/compare/v1.2.0...v1.3.0) - 2020-06-09
+## [1.4.0](https://github.com/supercharge/classes/compare/v1.3.0...v1.4.0) - 2020-08-xx
+
+### Updated
+- bump dependencies
+- change `main` entrypoint in `package.json` to `dist` folder
+- move test runner from `@hapi/lab` to `jest`
+- move assertions from `@hapi/code` to `jest`
+
+### Removed
+- remove `index.js` file which acted as a middleman to export from `dist` folder
+
+
+## [1.3.0](https://github.com/supercharge/classes/compare/v1.2.0...v1.3.0) - 2020-06-09
 
 ### Added
 - `isSubclassOf` method: determine whether a given class is subclassing (even in chain) a base class
@@ -11,13 +23,13 @@
 - bump dependencies
 
 
-## [1.2.0](https://github.com/supercharge/queue-datastructure/compare/v1.1.0...v1.2.0) - 2020-04-14
+## [1.2.0](https://github.com/supercharge/classes/compare/v1.1.0...v1.2.0) - 2020-04-14
 
 ### Added
 - link `types` in `package.json`
 
 
-## [1.1.0](https://github.com/supercharge/queue-datastructure/compare/v1.0.0...v1.1.0) - 2020-04-14
+## [1.1.0](https://github.com/supercharge/classes/compare/v1.0.0...v1.1.0) - 2020-04-14
 
 ### Added
 - `isFunction(input)` method determining whether the given `input` is a function
