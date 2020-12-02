@@ -14,7 +14,8 @@ describe('Classes', () => {
   it('isFunction', () => {
     expect(isFunction(Array)).toBe(true)
     expect(isFunction(class Rabbit { })).toBe(true)
-    expect(isFunction(function classLike () { })).toBe(true)
+    expect(isFunction(function func () { })).toBe(true)
+    expect(isFunction(async function func () { })).toBe(true)
 
     expect(isFunction(1)).toBe(false)
     expect(isFunction('string')).toBe(false)
