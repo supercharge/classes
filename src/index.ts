@@ -9,7 +9,7 @@ import { ClassHandler } from './class-handler'
  *
  * @returns {Boolean}
  */
-export const isFunction = function (value: any): boolean {
+export function isFunction (value: any): boolean {
   return new ClassHandler(value).isFunction()
 }
 
@@ -20,7 +20,7 @@ export const isFunction = function (value: any): boolean {
  *
  * @returns {Boolean}
  */
-export const isClass = function (value: any): boolean {
+export function isClass (value: any): boolean {
   return new ClassHandler(value).isClass()
 }
 
@@ -32,7 +32,7 @@ export const isClass = function (value: any): boolean {
  *
  * @returns {Boolean}
  */
-export const isSubclassOf = function (input: any, base: any): boolean {
+export function isSubclassOf (input: any, base: any): boolean {
   return new ClassHandler(input).isSubclassOf(base)
 }
 
@@ -45,6 +45,6 @@ export const isSubclassOf = function (input: any, base: any): boolean {
  *
  * @throws
  */
-export const className = function (input: any): string {
+export function className (input: any): string {
   return new ClassHandler(input).className()
 }
