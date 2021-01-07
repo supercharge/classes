@@ -1,7 +1,10 @@
 # Changelog
 
 
-## [1.4.0](https://github.com/supercharge/classes/compare/v1.3.0...v1.4.0) - 2020-08-xx
+## [1.4.0](https://github.com/supercharge/classes/compare/v1.3.0...v1.4.0) - 2021-01-07
+
+### Added
+- `className(input)` method: returns the class name of the given input. Throws if the input is not a class constructor
 
 ### Updated
 - bump dependencies
