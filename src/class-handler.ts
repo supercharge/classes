@@ -47,4 +47,21 @@ export class ClassHandler {
       ? this.input.prototype instanceof Base
       : false
   }
+
+  /**
+   * Returns the class name of the given input.
+   *
+   * @param {*} input
+   *
+   * @returns {String}
+   *
+   * @throws
+   */
+  className (): string {
+    if (this.isClass()) {
+      return this.input.name
+    }
+
+    throw new Error(`The given input is not a class constructor. Received "${typeof this.input}"`)
+  }
 }
