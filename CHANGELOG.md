@@ -1,6 +1,16 @@
 # Changelog
 
 
+## [1.5.0](https://github.com/supercharge/classes/compare/v1.4.0...v1.5.0) - 2021-08-22
+
+### Added
+- refined TypeScript types narrowing the inputs
+
+### Updated
+- bump dependencies
+- moved the code to the dedicated functions without the extra class handler
+
+
 ## [1.4.0](https://github.com/supercharge/classes/compare/v1.3.0...v1.4.0) - 2021-01-07
 
 ### Added
