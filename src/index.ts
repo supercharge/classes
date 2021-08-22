@@ -1,6 +1,6 @@
 'use strict'
 
-import { ClassHandler } from './class-handler'
+type Class<T = any, Arguments extends any[] = any[]> = new(...arguments_: Arguments) => T
 
 /**
  * Determine whether the given `value` is a function.
@@ -9,8 +9,8 @@ import { ClassHandler } from './class-handler'
  *
  * @returns {Boolean}
  */
-export function isFunction (value: any): boolean {
-  return new ClassHandler(value).isFunction()
+export function isFunction (value: any): value is Function {
+  return typeof value === 'function'
 }
 
 /**
@@ -20,8 +20,10 @@ export function isFunction (value: any): boolean {
  *
  * @returns {Boolean}
  */
-export function isClass (value: any): boolean {
-  return new ClassHandler(value).isClass()
+export function isClass (value: any): value is Class {
+  return isFunction(value)
+    ? value.toString().indexOf('class ') === 0
+    : false
 }
 
 /**
@@ -32,8 +34,10 @@ export function isClass (value: any): boolean {
  *
  * @returns {Boolean}
  */
-export function isSubclassOf (input: any, base: any): boolean {
-  return new ClassHandler(input).isSubclassOf(base)
+export function isSubclassOf (input: Class, Base: Class): boolean {
+  return isClass(Base)
+    ? input.prototype instanceof Base
+    : false
 }
 
 /**
@@ -45,6 +49,10 @@ export function isSubclassOf (input: any, base: any): boolean {
  *
  * @throws
  */
-export function className (input: any): string {
-  return new ClassHandler(input).className()
+export function className (input: Class): string {
+  if (isClass(input)) {
+    return input.name
+  }
+
+  throw new Error(`The given input is not a class constructor. Received "${typeof input}"`)
 }
