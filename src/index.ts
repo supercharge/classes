@@ -1,6 +1,10 @@
 'use strict'
 
-type Class<T = any, Arguments extends any[] = any[]> = new(...arguments_: Arguments) => T
+/**
+ * https://github.com/sindresorhus/type-fest/blob/1fa8872ae0bf261ec857a18b39ed9a157e320237/source/basic.d.ts#L6-L13
+ */
+type Class<T, Arguments extends unknown[] = any[]> = Constructor<T, Arguments> & { prototype: T }
+type Constructor<T, Arguments extends unknown[] = any[]> = new(...arguments_: Arguments) => T
 
 /**
  * Determine whether the given `value` is a function.
@@ -20,7 +24,7 @@ export function isFunction (value: any): value is Function {
  *
  * @returns {Boolean}
  */
-export function isClass (value: any): value is Class {
+export function isClass<T> (value: any): value is Class<T> {
   return isFunction(value)
     ? value.toString().indexOf('class ') === 0
     : false
@@ -34,7 +38,7 @@ export function isClass (value: any): value is Class {
  *
  * @returns {Boolean}
  */
-export function isSubclassOf (input: Class, Base: Class): boolean {
+export function isSubclassOf<T> (input: Class<T>, Base: Class<T>): boolean {
   return isClass(Base)
     ? input.prototype instanceof Base
     : false
@@ -49,7 +53,7 @@ export function isSubclassOf (input: Class, Base: Class): boolean {
  *
  * @throws
  */
-export function className (input: Class): string {
+export function className<T> (input: Class<T>): string {
   if (isClass(input)) {
     return input.name
   }
