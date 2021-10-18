@@ -1,8 +1,16 @@
 'use strict'
 
-const { isClass, isFunction, isSubclassOf, className } = require('..')
+const { isConstructor, isClass, isFunction, isSubclassOf, className } = require('..')
 
 describe('Classes', () => {
+  it('isConstructor', () => {
+    expect(isConstructor(class Rabbit { })).toBe(true)
+
+    expect(isConstructor(Array)).toBe(false)
+    expect(isConstructor('string')).toBe(false)
+    expect(isConstructor(function classLike () { })).toBe(false)
+  })
+
   it('isClass', () => {
     expect(isClass(class Rabbit { })).toBe(true)
 
