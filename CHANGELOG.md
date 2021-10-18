@@ -1,6 +1,15 @@
 # Changelog
 
 
+## [1.7.0](https://github.com/supercharge/classes/compare/v1.6.0...v1.7.0) - 2021-10-18
+
+### Added
+- add `isConstructor` method as an alias for `isClass`
+
+### Updated
+- revert TypeScript typings for the `isClass` method to the old handling
+
+
 ## [1.6.0](https://github.com/supercharge/classes/compare/v1.5.0...v1.6.0) - 2021-10-18
 
 ### Added
