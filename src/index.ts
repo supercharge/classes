@@ -18,13 +18,24 @@ export function isFunction (value: any): value is Function {
 }
 
 /**
+ * Determine whether the given `value` is an ES2015 class constructor.
+ *
+ * @param {*} value
+ *
+ * @returns {Boolean}
+ */
+export function isConstructor<T> (value: any): value is Constructor<T> {
+  return isClass<T>(value)
+}
+
+/**
  * Determine whether the given `value` is an ES2015 class.
  *
  * @param {*} value
  *
  * @returns {Boolean}
  */
-export function isClass<T> (value: any): value is Class<T> {
+export function isClass<T> (value: any): value is Constructor<T> {
   return isFunction(value)
     ? value.toString().indexOf('class ') === 0
     : false
@@ -38,7 +49,7 @@ export function isClass<T> (value: any): value is Class<T> {
  *
  * @returns {Boolean}
  */
-export function isSubclassOf<T> (input: Class<T>, Base: Class<T>): boolean {
+export function isSubclassOf<T> (input: Constructor<T>, Base: Constructor<T>): boolean {
   return isClass(Base)
     ? input.prototype instanceof Base
     : false
