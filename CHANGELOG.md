@@ -1,6 +1,15 @@
 # Changelog
 
 
+## [1.6.0](https://github.com/supercharge/classes/compare/v1.5.0...v1.6.0) - 2021-10-18
+
+### Added
+- refined TypeScript typings for classes checking for a specific constructor
+
+### Updated
+- bump dependencies
+
+
 ## [1.5.0](https://github.com/supercharge/classes/compare/v1.4.0...v1.5.0) - 2021-08-22
 
 ### Added
