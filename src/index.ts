@@ -29,6 +29,17 @@ export function isConstructor<T> (value: any): value is Constructor<T> {
 }
 
 /**
+ * Determine whether the given `value` is not an ES2015 class constructor.
+ *
+ * @param {*} value
+ *
+ * @returns {Boolean}
+ */
+export function isNotConstructor<T> (value: T | Constructor<any>): value is T {
+  return !isConstructor<any>(value)
+}
+
+/**
  * Determine whether the given `value` is an ES2015 class.
  *
  * @param {*} value
