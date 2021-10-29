@@ -1,6 +1,15 @@
 # Changelog
 
 
+## [1.8.0](https://github.com/supercharge/classes/compare/v1.7.0...v1.8.0) - 2021-10-29
+
+### Added
+- add `isNotConstructor` method
+
+### Updated
+- revert TypeScript typings for the `isClass` method to the old handling
+
+
 ## [1.7.0](https://github.com/supercharge/classes/compare/v1.6.0...v1.7.0) - 2021-10-18
 
 ### Added
