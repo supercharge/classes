@@ -1,6 +1,16 @@
 # Changelog
 
 
+## [1.9.0](https://github.com/supercharge/classes/compare/v1.8.0...v1.9.0) - 2021-12-01
+
+### Added
+- export `Class` and `Constructor` types
+
+### Updated
+- bump deps
+- use UVU and c8 for testing instead of jest
+
+
 ## [1.8.0](https://github.com/supercharge/classes/compare/v1.7.0...v1.8.0) - 2021-10-29
 
 ### Added
