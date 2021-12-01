@@ -3,8 +3,8 @@
 /**
  * https://github.com/sindresorhus/type-fest/blob/1fa8872ae0bf261ec857a18b39ed9a157e320237/source/basic.d.ts#L6-L13
  */
-type Class<T, Arguments extends unknown[] = any[]> = Constructor<T, Arguments> & { prototype: T }
-type Constructor<T, Arguments extends unknown[] = any[]> = new(...arguments_: Arguments) => T
+export type Class<T, Arguments extends unknown[] = any[]> = Constructor<T, Arguments> & { prototype: T }
+export type Constructor<T, Arguments extends unknown[] = any[]> = new(...arguments_: Arguments) => T
 
 /**
  * Determine whether the given `value` is a function.
