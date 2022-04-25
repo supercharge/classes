@@ -2,7 +2,7 @@
 
 const { test } = require('uvu')
 const expect = require('expect')
-const { isConstructor, isNotConstructor, isClass, isFunction, isSubclassOf, className } = require('..')
+const { isConstructor, isNotConstructor, isClass, isClassInstance, isFunction, isSubclassOf, className } = require('..')
 
 test('isConstructor', () => {
   expect(isConstructor(class Rabbit { })).toBe(true)
@@ -26,6 +26,20 @@ test('isClass', () => {
   expect(isClass(Array)).toBe(false)
   expect(isClass('string')).toBe(false)
   expect(isClass(function classLike () { })).toBe(false)
+})
+
+test('isClassInstance', () => {
+  class Rabbit { }
+
+  expect(isClassInstance(new Rabbit())).toBe(true)
+
+  expect(isClassInstance()).toBe(false)
+  expect(isClassInstance(null)).toBe(false)
+  expect(isClassInstance(undefined)).toBe(false)
+  expect(isClassInstance(Array)).toBe(false)
+  expect(isClassInstance(Rabbit)).toBe(false)
+  expect(isClassInstance('string')).toBe(false)
+  expect(isClassInstance(function classLike () { })).toBe(false)
 })
 
 test('isFunction', () => {

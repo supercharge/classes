@@ -53,6 +53,17 @@ export function isClass<T> (value: any): value is Constructor<T> {
 }
 
 /**
+ * Determine whether the given `value` is an instance of a JavaScript class.
+ *
+ * @param {*} value
+ *
+ * @returns {Boolean}
+ */
+export function isClassInstance<T> (value: any): value is InstanceType<Constructor<T>> {
+  return isClass(value?.constructor)
+}
+
+/**
  * Determine whether the given `input` is subclassing a given base class.
  *
  * @param {*} input

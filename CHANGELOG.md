@@ -1,6 +1,16 @@
 # Changelog
 
 
+## [1.10.0](https://github.com/supercharge/classes/compare/v1.9.0...v1.10.0) - 2022-04-25
+
+### Added
+- `isClassInstance`
+
+### Updated
+- bump deps
+- use UVU and c8 for testing instead of jest
+
+
 ## [1.9.0](https://github.com/supercharge/classes/compare/v1.8.0...v1.9.0) - 2021-12-01
 
 ### Added
