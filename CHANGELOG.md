@@ -1,6 +1,12 @@
 # Changelog
 
 
+## [1.11.0](https://github.com/supercharge/classes/compare/v1.10.0...v1.11.0) - 2022-xx-xx
+
+### Updated
+- bump deps
+
+
 ## [1.10.0](https://github.com/supercharge/classes/compare/v1.9.0...v1.10.0) - 2022-04-25
 
 ### Added
