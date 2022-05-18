@@ -7,7 +7,7 @@
     "url": "https://github.com/supercharge/classes/issues"
   },
   "devDependencies": {
-    "@supercharge/eslint-config-typescript": "~2.0.0",
+    "@supercharge/eslint-config-typescript": "~3.1.0",
     "c8": "~7.11.3",
     "eslint": "~8.15.0",
     "expect": "~28.1.0",
@@ -15,7 +15,7 @@
     "uvu": "~0.5.3"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=14"
   },
   "files": [
     "dist"
