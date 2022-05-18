@@ -1,7 +1,7 @@
 'use strict'
 
 const { test } = require('uvu')
-const expect = require('expect')
+const { expect } = require('expect')
 const { isConstructor, isNotConstructor, isClass, isClassInstance, isFunction, isSubclassOf, className } = require('..')
 
 test('isConstructor', () => {
