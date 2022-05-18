@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 16
 
       - name: Install dependencies
         run: npm install
@@ -34,7 +34,7 @@ jobs:
       - name: Set GitHub Package Registry and Scope
         uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: '@supercharge'
 
