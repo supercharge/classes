@@ -1,7 +1,10 @@
 # Changelog
 
 
-## [2.0.0](https://github.com/supercharge/classes/compare/v1.10.0...v2.0.0) - 2022-xx-xx
+## [2.0.0](https://github.com/supercharge/classes/compare/v1.10.0...v2.0.0) - 2022-10-08
+
+### Added
+- `classNames`: returns the class names of the given `input` and all parent classes
 
 ### Updated
 - bump deps
