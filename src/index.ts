@@ -93,3 +93,29 @@ export function className<T> (input: Class<T>): string {
 
   throw new Error(`The given input is not a class constructor. Received "${typeof input}"`)
 }
+
+/**
+ * Returns the class names of the given `input` and all parent classes.
+ * Throws if the given `input` is not a class.
+ *
+ * @param {*} input
+ *
+ * @returns {String[]}
+ *
+ * @throws
+ */
+export function classNames<T> (input: Class<T>): string[] {
+  if (!isClass(input)) {
+    throw new Error(`The given input is not a class constructor. Received "${typeof input}"`)
+  }
+
+  let clazz = input
+  const names = []
+
+  do {
+    names.push(clazz.name)
+    clazz = Object.getPrototypeOf(clazz)
+  } while (clazz.name)
+
+  return names
+}

@@ -2,7 +2,16 @@
 
 const { test } = require('uvu')
 const { expect } = require('expect')
-const { isConstructor, isNotConstructor, isClass, isClassInstance, isFunction, isSubclassOf, className } = require('..')
+const {
+  isConstructor,
+  isNotConstructor,
+  isClass,
+  isClassInstance,
+  isFunction,
+  isSubclassOf,
+  className,
+  classNames
+} = require('..')
 
 test('isConstructor', () => {
   expect(isConstructor(class Rabbit { })).toBe(true)
@@ -79,6 +88,21 @@ test('className', () => {
   expect(() => className(1)).toThrow('The given input is not a class constructor')
   expect(() => className(null)).toThrow('The given input is not a class constructor')
   expect(() => className(function () {})).toThrow('The given input is not a class constructor')
+})
+
+test('classNames', () => {
+  class Base { }
+  class Middle extends Base { }
+  class Sub extends Middle { }
+
+  expect(classNames(Sub)).toEqual(['Sub', 'Middle', 'Base'])
+  expect(classNames(Middle)).toEqual(['Middle', 'Base'])
+  expect(classNames(Base)).toEqual(['Base'])
+
+  expect(() => classNames()).toThrow('The given input is not a class constructor')
+  expect(() => classNames(1)).toThrow('The given input is not a class constructor')
+  expect(() => classNames(null)).toThrow('The given input is not a class constructor')
+  expect(() => classNames(function () {})).toThrow('The given input is not a class constructor')
 })
 
 test.run()
